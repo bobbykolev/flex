@@ -138,33 +138,8 @@ nav {
 
 	&.one {
   		flex-direction: column;
-
-  		.main-content {
-
-			display: -webkit-flex;
-			display: flex;
-			flex-direction: column;
-
-			> div {
-				overflow: hidden;
-				flex: 1;
-
-				&:last-of-type {
-					article {
-						max-height: 300px;
-						overflow: hidden;
-					}
-				}
-			}
-  		}
 	}
 } 
-
-article {
-	h2 {
-		font-size: $large;
-	}
-}
 
 .footer-container {
 	display: -webkit-flex;
@@ -193,23 +168,8 @@ article {
     flex-direction: row;
 
     .main-content {
-		flex-direction: row;
-
-		order: 1;
-    	flex: 1;
-
-		> div {
-			height: 350px;
-			overflow: hidden;
-			flex: 1;
-
-			&:last-of-type {
-				article {
-					max-height: 50%;
-					overflow: hidden;
-				}
-			}
-		}	
+    	order: 1;
+    	flex: 1;	
     }
 
     aside {

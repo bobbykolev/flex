@@ -12,7 +12,7 @@ gulp.task('compileSass', function(){
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('./sass/*.scss', ['compileSass']);
+    gulp.watch('./sass/**.scss', ['compileSass']);
 });
 
 gulp.task('default', ['compileSass', 'watch'], function(){});
