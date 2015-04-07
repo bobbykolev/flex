@@ -113,6 +113,19 @@ nav.main-nav {
   justify-content: flex-start; }
   .content-block.one {
     flex-direction: column; }
+    .content-block.one .main-content {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column; }
+      .content-block.one .main-content > div {
+        overflow: hidden;
+        flex: 1; }
+        .content-block.one .main-content > div:last-of-type article {
+          max-height: 300px;
+          overflow: hidden; }
+
+article h2 {
+  font-size: 16px; }
 
 .footer-container {
   display: -webkit-flex;
@@ -133,8 +146,16 @@ nav.main-nav {
   .content-block.one {
     flex-direction: row; }
     .content-block.one .main-content {
+      flex-direction: row;
       order: 1;
       flex: 1; }
+      .content-block.one .main-content > div {
+        height: 350px;
+        overflow: hidden;
+        flex: 1; }
+        .content-block.one .main-content > div:last-of-type article {
+          max-height: 50%;
+          overflow: hidden; }
     .content-block.one aside {
       order: 2;
       width: 30%;
