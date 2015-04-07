@@ -16,7 +16,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4beb2', endColorstr='#7a7569',GradientType=0 );
   /* IE6-9 */ }
 
-body, ul, li, h1, h2, h3, h4, h5, input {
+body, ul, li, h1, h2, h3, h4, h5, input, p {
   padding: 0;
   margin: 0; }
 
@@ -43,7 +43,11 @@ html, body {
   height: 100%; }
 
 body {
-  background: #FFFDFA; }
+  background: #FFFDFA;
+  font-family: 'Segoe UI'; }
+
+h1, h2, h3, h4 {
+  color: #046380; }
 
 h3 {
   font-size: 12px; }
@@ -62,9 +66,19 @@ img {
   display: flex;
   flex-direction: row;
   -webkit-align-items: center;
-  align-items: center; }
+  align-items: center;
+  height: 60px;
+  overflow: hidden; }
   .main-title h1 {
-    padding: 1%; }
+    padding: 1%;
+    font-family: "Black Ops One";
+    color: #D94929;
+    font-size: 44px; }
+  .main-title .logo {
+    position: absolute;
+    max-width: 70px;
+    top: -2px;
+    left: 72px; }
   .main-title h1 + div {
     flex: 1; }
   .main-title div {
@@ -124,8 +138,14 @@ nav.main-nav {
           max-height: 300px;
           overflow: hidden; }
 
+article h1 {
+  font-size: 16px; }
 article h2 {
   font-size: 16px; }
+article img {
+  float: left;
+  max-width: 50px;
+  margin: 3px; }
 
 .footer-container {
   display: -webkit-flex;
@@ -163,4 +183,4 @@ article h2 {
  }
 
 div, p, h1, h2, h3, nav, header, section, li {
-  border: 1px solid #ccc; }
+  border: 1px solid #eee; }

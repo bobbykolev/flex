@@ -1,5 +1,5 @@
 //clears
-body, ul, li, h1, h2, h3, h4, h5, input {
+body, ul, li, h1, h2, h3, h4, h5, input, p {
   padding: 0;
   margin: 0;
 }
@@ -32,6 +32,11 @@ html, body {
 
 body {
 	background: #FFFDFA;	
+	font-family: 'Segoe UI';
+}
+
+h1,h2,h3,h4 {
+	color: $darkBlue;
 }
 
 h3 {
@@ -56,9 +61,21 @@ img {
   	flex-direction: row;
 	-webkit-align-items: center;
     align-items: center;
+  	height: 60px;
+  	overflow: hidden;
     
 	h1 {
 		padding: 1%;
+		font-family: "Black Ops One";
+		color: $redish;
+		font-size: 44px;
+	}
+
+	.logo {
+		position: absolute;
+		max-width: 70px;
+	  	top: -2px;
+  		left: 72px;
 	}
 
 	h1 + div {
@@ -161,8 +178,18 @@ nav {
 } 
 
 article {
+	h1 {
+		font-size: $large;
+	}
+
 	h2 {
 		font-size: $large;
+	}
+
+	img {
+		float:left;
+		max-width: 50px;
+		margin: 3px;
 	}
 }
 
@@ -222,5 +249,5 @@ article {
 
 //temporary
 div,p,h1,h2,h3,nav, header, section, li {
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 }
