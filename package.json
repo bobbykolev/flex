@@ -1,0 +1,13 @@
+{
+	"name": "Html5-Layout-FlexBox",
+	"author":"bobbykolev",
+	"description":"Html5 layout build with FlexBox",
+	"license":"MIT",
+	"devDependencies": {
+		"bower":"",
+		"gulp":"",
+		"gulp-sass":"",
+		"gulp-livereload":"",
+		"gulp-util":""
+	}
+}

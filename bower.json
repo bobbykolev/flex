@@ -1,0 +1,7 @@
+{
+    "name": "angularjs-test",
+    "version": "0.0.1",
+    "dependencies": {
+        "font-awesome": "latest"
+    }
+}
