@@ -8,49 +8,77 @@ $medium: 12px;
 $small: 9px;
 
 //colors
-$redish: #D94929;
-$darkBlue: #046380;
-$beige: #EFECCA;
-$darkBeige: #A7A37E;
+$redish: #e74c3c;
+$darkBlue: #2c3e50;
+$blue1: #3498db;
+$blue2: #2980b9;
+$beige: #efecca;
+$darkBeige: #a7a37e;
 
-$brown: #9B8C6A;
+$brown: #9b8c6a;
+$bg: #ecf0f1;
 
 %nativeGradient1 {
-	background: #c4beb2; /* Old browsers */
-	background: -moz-linear-gradient(top,  #c4beb2 0%, #7a7569 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c4beb2), color-stop(100%,#7a7569)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #c4beb2 0%,#7a7569 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #c4beb2 0%,#7a7569 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #c4beb2 0%,#7a7569 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #c4beb2 0%,#7a7569 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4beb2', endColorstr='#7a7569',GradientType=0 ); /* IE6-9 */
+    background: #c4beb2;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #c4beb2 0%, #7a7569 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c4beb2), color-stop(100%, #7a7569));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c4beb2 0%, #7a7569 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c4beb2 0%, #7a7569 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c4beb2 0%, #7a7569 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #c4beb2 0%, #7a7569 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c4beb2', endColorstr='#7a7569',GradientType=0 );
+    /* IE6-9 */
+    background: #ebeeef;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ebeeef 0%, #bcc6ca 50%, #b2c0c6 51%, #d3d7d9 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebeeef), color-stop(50%, #bcc6ca), color-stop(51%, #b2c0c6), color-stop(100%, #d3d7d9));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ebeeef 0%, #bcc6ca 50%, #b2c0c6 51%, #d3d7d9 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ebeeef 0%, #bcc6ca 50%, #b2c0c6 51%, #d3d7d9 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ebeeef 0%, #bcc6ca 50%, #b2c0c6 51%, #d3d7d9 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #ebeeef 0%, #bcc6ca 50%, #b2c0c6 51%, #d3d7d9 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeeef', endColorstr='#d3d7d9',GradientType=0 );
+    /* IE6-9 */
 }
 
 //mixins
 @mixin boxSizing($type: border-box) {
-  -webkit-box-sizing: $type;
-  -moz-box-sizing: $type;
-  box-sizing: $type;
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
 }
 
 @mixin truncateText($overflow: ellipsis) {
-  overflow: hidden;
-  text-overflow: $overflow; // values are: clip, ellipsis, or a string
-  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: $overflow;
+    // values are: clip, ellipsis, or a string
+    white-space: nowrap;
 }
 
 @mixin truncateTextToSize($width: 100%, $overflow: ellipsis) {
-  display: inline-block;
-  max-width: $width;
-  @include truncateText($overflow);
+    display: inline-block;
+    max-width: $width;
+    @include truncateText($overflow);
 }
 
 %clearfix {
-  &:after {
-    content: " ";
-    display: block;
-    font-size: 1px;
-    line-height: 1px;
-    clear: both;
-  }
+    &:after {
+        content: " ";
+        display: block;
+        font-size: 1px;
+        line-height: 1px;
+        clear: both;
+    }
 }

@@ -1,6 +1,8 @@
 (function resize() {
 	var windowHeight = window.innerHeight,
-		footerHeight = 40;
+		footerHeight = 40,
+		wrapper = document.getElementById('wrapper');
 
-	document.getElementById('wrapper').style.height = windowHeight - (footerHeight) + 'px';
+	wrapper.style.height = windowHeight - (footerHeight) + 'px';
+	//wrapper.style['overflow-y'] = 'scroll';
 })();
