@@ -112,6 +112,8 @@ img {
         font-family: "Black Ops One";
         color: $redish;
         font-size: 30px;
+        line-height: 22px;
+        overflow: hidden;
         border: none;
     }
 
@@ -205,9 +207,19 @@ nav {
                     width: 0;
 
                     i {
+                        font-size: $larger + 5;
+                        cursor: pointer;
                         position: absolute;
                         right: 5px;
                         margin-top: 10px;
+                        opacity: 0.6;
+                        transform: scale3d(0.8, 0.8, 1);
+
+                        &:hover {
+                            opacity: 1;
+                            transform: scale3d(1, 1, 1);
+                            transition: 0.3s;
+                        }
                     }
                 }
             }
@@ -297,6 +309,8 @@ nav {
 }
 
 article {
+    flex: 1;
+
     h1 {
         font-size: $large;
         height: 46px;
@@ -308,8 +322,8 @@ article {
     }
 
     img {
-        float: left;
-        max-width: 50px;
+        float: right;
+        max-width: 80px;
         margin: 3px;
     }
 
@@ -324,6 +338,10 @@ article {
 }
 
 aside {
+    h3 {
+        height: 46px;
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -365,8 +383,9 @@ aside {
 .footer-container {
     display: -webkit-flex;
     display: flex;
-    -webkit-align-items: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     position: absolute;
     left: 0;
     width: 100%;
@@ -378,8 +397,17 @@ aside {
 
     i {
         padding: 0 2%;
-        font-size: $larger;
+        font-size: $larger + 5;
+        opacity: 0.6;
+        transform: scale3d(0.8, 0.8, 1);
+
+        &:hover {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+            transition: 0.3s;
+        }
     }
+    .fa-share-alt {}
 }
 
 @media screen and (min-width: 700px) {
@@ -417,7 +445,6 @@ aside {
             aside {
                 order: 2;
                 width: 30%;
-                padding: 10px;
 
                 input {
                     flex: 1;

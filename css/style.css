@@ -133,6 +133,8 @@ img {
   font-family: "Black Ops One";
   color: #e74c3c;
   font-size: 30px;
+  line-height: 22px;
+  overflow: hidden;
   border: none;
 }
 .main-title .logo {
@@ -213,9 +215,18 @@ nav.main-nav ul li:last-of-type {
   width: 0;
 }
 nav.main-nav ul li:last-of-type i {
+  font-size: 23px;
+  cursor: pointer;
   position: absolute;
   right: 5px;
   margin-top: 10px;
+  opacity: 0.6;
+  transform: scale3d(0.8, 0.8, 1);
+}
+nav.main-nav ul li:last-of-type i:hover {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition: 0.3s;
 }
 nav.sub-nav ul {
   align-items: stretch;
@@ -284,6 +295,9 @@ nav.sub-nav ul li a:hover {
   flex-direction: column;
 }
 
+article {
+  flex: 1;
+}
 article h1 {
   font-size: 16px;
   height: 46px;
@@ -293,8 +307,8 @@ article h2 {
   font-size: 16px;
 }
 article img {
-  float: left;
-  max-width: 50px;
+  float: right;
+  max-width: 80px;
   margin: 3px;
 }
 article.featured-article img {
@@ -304,6 +318,9 @@ article.featured-article img {
   max-width: 100%;
 }
 
+aside h3 {
+  height: 46px;
+}
 aside form {
   display: flex;
   flex-direction: column;
@@ -339,8 +356,9 @@ aside form input[type="submit"]:hover {
 .footer-container {
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
   position: absolute;
   left: 0;
   width: 100%;
@@ -351,7 +369,14 @@ aside form input[type="submit"]:hover {
 }
 .footer-container i {
   padding: 0 2%;
-  font-size: 18px;
+  font-size: 23px;
+  opacity: 0.6;
+  transform: scale3d(0.8, 0.8, 1);
+}
+.footer-container i:hover {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition: 0.3s;
 }
 
 @media screen and (min-width: 700px) {
@@ -384,7 +409,6 @@ aside form input[type="submit"]:hover {
   .content-block.one aside {
     order: 2;
     width: 30%;
-    padding: 10px;
   }
   .content-block.one aside input {
     flex: 1;
