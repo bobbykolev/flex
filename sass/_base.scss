@@ -4,6 +4,12 @@ body, ul, li, h1, h2, h3, h4, h5, input, p {
     margin: 0;
 }
 
+button, input[type="submit"] {
+    background-image: none;
+    border-radius: 0;
+    border: none;
+}
+
 ul {
     list-style: none;
 }
@@ -39,15 +45,17 @@ body {
 
 h1, h2, h3, h4 {
     color: $blue2;
-    margin: 2%;
+    margin: 5px;
     border-bottom: 1px solid lighten($redish, 30%);
 }
 
 h3 {
     font-size: $large;
+    height: 22px;
 
     .top-featured & {
         font-size: $medium;
+        border: none;
     }
 }
 
@@ -103,7 +111,8 @@ img {
         padding: 1%;
         font-family: "Black Ops One";
         color: $redish;
-        font-size: 44px;
+        font-size: 30px;
+        border: none;
     }
 
     .logo {
@@ -189,6 +198,7 @@ nav {
                     padding: 15px;
                     border: none;
                     width: 100%;
+                    background: none;
                 }
 
                 &:last-of-type {
@@ -212,8 +222,7 @@ nav {
             li {
                 display: flex;
                 align-items: center;
-                border-right: 1px solid lighten($redish, 10%);
-                border-top: 1px solid lighten($redish, 10%);
+                //border-top: 1px solid lighten($redish, 10%);
                 border-bottom: 1px solid lighten($redish, 10%);
                 overflow: hidden;
 
@@ -225,6 +234,8 @@ nav {
 
                 &.active {
                     border-top: 2px solid lighten($redish, 10%);
+                    border-right: 1px solid lighten($redish, 10%);
+                    border-left: 1px solid lighten($redish, 10%);
                     border-bottom: none;
                 }
 
@@ -288,6 +299,8 @@ nav {
 article {
     h1 {
         font-size: $large;
+        height: 46px;
+        overflow: hidden;
     }
 
     h2 {
@@ -302,7 +315,49 @@ article {
 
     &.featured-article {
         img {
+            display: block;
+            float: none;
+            margin: auto;
             max-width: 100%;
+        }
+    }
+}
+
+aside {
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        > div {
+            display: flex;
+            height: 30px;
+            align-items: stretch;
+
+            .fa {
+                color: $blue2;
+                font-size: $larger + 5;
+                width: 20px;
+            }
+
+            input {
+                height: auto;
+                background: none;
+                border: none;
+                padding: 1%;
+                color: $blue2;
+            }
+        }
+
+        input[type="submit"] {
+            background: $redish;
+            color: white;
+            text-transform: uppercase;
+            min-width: 100px;
+
+            &:hover {
+                background: darken($redish, 20%);
+            }
         }
     }
 }
@@ -327,7 +382,7 @@ article {
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     .content-block {
         &.one {
             flex-direction: row;
@@ -363,13 +418,13 @@ article {
                 order: 2;
                 width: 30%;
                 padding: 10px;
+
+                input {
+                    flex: 1;
+                }
             }
         }
-    }
-}
 
-@media screen and (min-width: 700px) {
-    .content-block {
         &.two {
             flex-direction: row;
         }
