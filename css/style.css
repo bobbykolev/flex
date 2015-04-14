@@ -81,8 +81,9 @@ h3 {
   height: 22px;
 }
 .top-featured h3 {
-  font-size: 12px;
+  font-size: 9px;
   border: none;
+  overflow: hidden;
 }
 
 a {
